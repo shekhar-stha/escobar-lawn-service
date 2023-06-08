@@ -11968,6 +11968,10 @@ textarea.form-control-lg {
   font-size: 28px;
 }
 
+.lh-25 {
+  line-height: 25px;
+}
+
 p {
   margin: 0px;
 }
@@ -12107,6 +12111,13 @@ body {
   .right-arrow {
     right: -5px;
   }
+}
+
+.testimonial .slick-dots li button {
+  background-color: #ffffff;
+}
+.testimonial li.slick-active button {
+  background-color: #e29821;
 }
 
 .white-nav {
@@ -12350,4 +12361,74 @@ section {
 .our-services .multiple-slides .service-div:hover p.hidden-information {
   display: block;
   animation: fade-in 0.8s ease-in-out;
+}
+
+.cta {
+  height: 30rem;
+  position: relative;
+}
+.cta .cta-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+  z-index: -1;
+}
+
+.why-us .why-us-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+.why-us .why-us-row i {
+  color: #6b9731;
+  font-size: 18px;
+  margin-right: 4px;
+}
+.why-us .why-us-img {
+  display: flex;
+  justify-content: end;
+}
+.why-us .why-us-img img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 10% 30% 50% 70%;
+  filter: brightness(90%);
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  overflow: hidden;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.testimonial-card .quote-1 {
+  position: absolute;
+  font-size: 2rem;
+  color: #e29821;
+  top: 0px;
+  left: 0;
+}
+
+.testimonial-card .quote-2 {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 0px;
+  right: 0;
+  color: #e29821;
+  transform: rotate(180deg);
+}
+
+.testimonial-card img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
 }

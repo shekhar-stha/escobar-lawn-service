@@ -1,4 +1,3 @@
-
 // Slick
 
 .slick-dots {
@@ -69,6 +68,7 @@
 
 .left-arrow {
     left: -30px;
+
     @media (max-width: 768px) {
         left: -5px;
     }
@@ -76,7 +76,25 @@
 
 .right-arrow {
     right: -30px;
+
     @media (max-width: 768px) {
         right: -5px;
     }
+}
+
+
+.testimonial {
+
+    .slick-dots {
+        li {
+            button {
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    li.slick-active button {
+        background-color: $secondary
+    }
+
 }

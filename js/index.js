@@ -27,3 +27,28 @@ $('.multiple-slides').slick({
     ]
   });
   
+
+  
+$(".testimonial-carousel").slick({
+  infinite: true,
+  slidesToShow: 2,
+  arrows: false,
+  autoplay: true,
+  speed: 300,
+  loop: true,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 850,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
