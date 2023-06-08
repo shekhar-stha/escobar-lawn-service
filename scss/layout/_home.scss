@@ -1,3 +1,15 @@
+    .container {
+        .header {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $success;
+        }
+    }
+
+    section {
+        margin-bottom: 4.5rem;
+    }
+
     .nav-hero {
         .hero {
             // height: 80vh;
@@ -36,36 +48,39 @@
             }
         }
 
-        .features{ 
-            margin-top: -2rem;
+        .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
+            gap: 2px;
+            background-color: #fff;
+
             @media (max-width: 992px) {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             @media (max-width: 768px) {
                 grid-template-columns: repeat(1, 1fr);
             }
-            div{
+
+            div {
                 padding: 2rem;
-                background-color: $white;
-                border-radius: 30px;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                background-color: #e7f5d4;
+                // border-radius: 30px;
+                // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
                 text-align: center;
 
-                i{
+                i {
                     font-size: 2rem;
                     color: $primary;
                     margin-bottom: 0.9rem;
                 }
 
-                h3{
+                h3 {
                     font-size: 1.35rem;
                     font-weight: 600;
                 }
 
-                p{
+                p {
                     font-size: 0.9rem;
                 }
             }
@@ -79,5 +94,112 @@
             z-index: -3;
             filter: brightness(30%);
             top: 0;
+        }
+    }
+
+    .problems {
+        .problems-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+
+            @media (max-width: 992px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .problems {
+                padding: 2rem;
+                border-radius: 30px;
+
+                text-align: center;
+
+                i {
+                    font-size: 3rem;
+                    color: $primary;
+                    margin-bottom: 0.9rem;
+                }
+
+                h5 {
+                    font-size: 1.35rem;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+
+
+    .our-services {
+
+        .multiple-slides {
+
+            .service-div {
+                height: 20rem;
+                position: relative;
+                border-radius: 8px;
+                cursor: pointer;
+
+                .slider-img-full {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    z-index: -1;
+                    border-radius: 8px;
+                    filter: brightness(80%);
+                }
+
+                .information {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: rgba(200, 255, 200, 0.1);
+                    padding: 10px 0;
+                    transition: background-color 0.3s ease-in-out;
+                }
+
+                h4 {
+                    margin-top: 0;
+                    color: $white;
+                    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+                    background-color: $primary;
+                    margin-bottom: 2rem;
+                    padding-left: 1.5rem;
+                    padding: 0.3rem 1.5rem;
+                    width: fit-content;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                p.hidden-information {
+                    display: none;
+                    padding: 0.3rem 1.5rem;
+                    color: $white;
+                    font-size: 15px;
+                }
+
+                &:hover h4 {
+                    background-color: transparent;
+                    margin-bottom: 0;
+                }
+
+                &:hover .information {
+                    background-color: rgba(25, 173, 25, 0.8);
+                }
+
+                &:hover p.hidden-information {
+                    display: block;
+                    animation: fade-in 0.8s ease-in-out;
+                }
+            }
         }
     }
