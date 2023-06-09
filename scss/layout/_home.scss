@@ -452,3 +452,100 @@
             background-color: #ffffff !important;
         }
     }
+
+
+    // Service pages
+    .flex-description {
+        .card {
+            transition: all 0.2s;
+            position: relative;
+            cursor: pointer;
+            height: 80%;
+            width: 80%;
+            margin-left: 1.5rem;
+
+            @media (max-width: 992px) {
+                height: 100%;
+                width: 100%;
+                margin-left: 0rem;
+                margin-top: 3rem;
+            }
+
+            img {
+                object-fit: cover;
+                max-height: 400px;
+
+                @media (max-width: 992px) {
+                    max-height: 300px;
+                }
+            }
+
+            .card-inner {
+                width: inherit;
+                height: inherit;
+                background: rgba(255, 255, 255, .05);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(10px);
+                border-radius: 8px;
+            }
+
+            .card:hover {
+                transform: scale(1.04);
+            }
+        }
+    }
+
+    .ratings-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+
+        @media (max-width:992px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.2rem;
+        }
+
+        @media (max-width:576px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2.2rem;
+        }
+
+        .ratings-card {
+            border: none;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+            padding: 1.5rem 1rem;
+            display: flex; 
+            align-items: center;
+            flex-direction: column;
+            background-color: #ffffff;
+
+            img {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 1rem;
+            }
+
+            h4 {
+                font-size: 1.20rem;
+                font-weight: 500;
+            }
+
+            .info{
+                line-height: 24px;
+                color: #504e4b;
+            }
+
+            .ratings {
+                font-size: .85rem;
+                line-height: 24px;
+                color: #FF9529;
+                margin-top: 0.5rem;
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
