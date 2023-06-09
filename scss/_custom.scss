@@ -110,14 +110,16 @@ p {
 }
 
 
-.btn-check:checked+.btn,
-:not(.btn-check)+.btn:active,
-.btn:first-child:active,
-.btn.active,
-.btn.show,
-.btn-primary:hover,
-.btn-warning:hover {
-    color: $black !important;
+.btn-primary{
+    color: $white;
+    font-weight: 500;
+    border: 2px solid $primary;
+}
+
+.btn-primary:hover{
+    color: $primary;
+    background-color: transparent;
+    border: 2px solid $primary;
 }
 
 .btn-warning {
